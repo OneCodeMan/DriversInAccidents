@@ -35,18 +35,21 @@ function median(arr) {
   return median;
 }
 
+
 (function(d3) {
   'use strict';
 
   var genderCounters = { maleCount: 0, femaleCount: 0, nullCount: 0 }
   var ages = [];
+  var statePlatesArr = [];
 
   d3.csv('data/DriversInAccidents.csv', function(data) {
-    console.log(data[33]);
     data.forEach(function(d) {
       var driverGender = d.drv_gndr_cd;
       var driverAgeRaw = d.drv_prty_age;
       var driverAge = parseInt(driverAgeRaw);
+      var state = d.drv_driv_licn_st;
+
       switch (driverGender) {
         case 'M':
           genderCounters.maleCount++;
@@ -63,11 +66,17 @@ function median(arr) {
         ages.push(driverAge);
       }
 
+      if (state) {
+        statePlatesArr.push(state);
+      }
+
     });
+    var statePlates = Array.from(new Set(statePlatesArr));
+    console.log(statePlates);
 
     plotGender();
     plotAge();
-    plotMap();
+    plotTime();
   });
 
   function plotGender() {
@@ -110,6 +119,13 @@ function median(arr) {
       .attr('fill', function(d) {
         return color(d.data.label);
       });
+
+      var maleCountSpan = document.getElementById('male-count');
+      var femaleCountSpan = document.getElementById('female-count');
+      var nullCountSpan = document.getElementById('null-count');
+      maleCountSpan.innerHTML = genderCounters.maleCount;
+      femaleCountSpan.innerHTML = genderCounters.femaleCount;
+      nullCountSpan.innerHTML = genderCounters.nullCount;
     }
 
   function plotAge() {
@@ -126,14 +142,11 @@ function median(arr) {
 
   }
 
-  function plotMap() {
-    var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
-        });
-      }
+  function plotTime() {
+  }
+
+  function plotKilled() {
+
   }
 
 })(window.d3);
