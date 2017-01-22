@@ -158,15 +158,6 @@ function occ(arr, el) {
 
   function plotStates() {
 
-    var stateList = new Vue({
-      el: '#states',
-      data: {
-        states: [
-          { msg: 'MI'},
-          { msg: 'FL'},
-        ]
-      }
-    })
   }
 
 })(window.d3);

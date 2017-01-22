@@ -4,18 +4,17 @@ var width = 960,
 
 var formatNumber = d3.format(",d");
 
-var x = d3.scale.linear()
+var x = d3.scaleLinear()
     .range([0, 2 * Math.PI]);
 
-var y = d3.scale.sqrt()
+var y = d3.scaleSqrt()
     .range([0, radius]);
 
-var color = d3.scale.category20c();
+var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
-var partition = d3.layout.partition()
-    .value(function(d) { return d.size; });
+var partition = d3.partition();
 
-var arc = d3.svg.arc()
+var arc = d3.arc()
     .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
     .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
     .innerRadius(function(d) { return Math.max(0, y(d.y)); })

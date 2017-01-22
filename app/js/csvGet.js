@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	d3.csv("/drivers_in_accidents.csv", function(d) {
+	d3.csv("data/DriversInAccidents.csv", function(d) {
 		return {
 			//drv_rec_type: d.drv_rec_type, //crash level record
 			//drv_crsh_id: d.drv_crsh_id, //id of crash
@@ -60,11 +60,6 @@ $(document).ready(function() {
 			}
 			xhr.send(null);
 		}
-
-		function searchSuccess(response)
-		{
-			var json = JSON.parse(response);
-
 
 		for (i = 0; i < data.length; i++) {
 			if (data[i].drv_injy_svty_cd == "1") {
@@ -244,8 +239,6 @@ $(document).ready(function() {
 				}
 			}
 		}
-	}
-	search();
 
 	});
 });
