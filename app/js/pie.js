@@ -2,9 +2,12 @@
   'use strict';
 
   d3.csv('data/DriversInAccidents.csv', function(data) {
+    console.log(data[0]);
+    /*
     data.forEach(function(d) {
-      console.log(d[0]);
+      console.log(d);
     });
+    */
   });
 
 
