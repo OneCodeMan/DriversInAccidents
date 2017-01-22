@@ -2,6 +2,11 @@
   border: solid 1px;
   border-radius: 15px;
   padding: 10px; }
+  .container-fluid .pie-charts-div ul {
+    list-style-type: none; }
+  .container-fluid .pie-charts-div li {
+    font-weight: bold;
+    font-size: 25px; }
   .container-fluid .pie-charts-div #pie-charts-title {
     text-align: center; }
   .container-fluid .pie-charts-div .legend-title {

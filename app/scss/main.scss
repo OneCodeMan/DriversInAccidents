@@ -5,6 +5,15 @@
 		border-radius: 15px;
 		padding: 10px;
 
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			font-weight: bold;
+			font-size: 25px;
+		}
+
 		#pie-charts-title {
 			text-align: center;
 		}
