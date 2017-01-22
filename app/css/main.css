@@ -1,4 +1,8 @@
 .container-fluid .pie-charts-div {
-  border: solid; }
+  border: solid 1px;
+  border-radius: 15px;
+  padding: 10px; }
   .container-fluid .pie-charts-div #pie-charts-title {
+    text-align: center; }
+  .container-fluid .pie-charts-div .legend-title {
     text-align: center; }

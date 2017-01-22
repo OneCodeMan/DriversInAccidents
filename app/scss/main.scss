@@ -1,7 +1,15 @@
 .container-fluid {
+
 	.pie-charts-div {
-		border: solid;
+		border: solid 1px;
+		border-radius: 15px;
+		padding: 10px;
+
 		#pie-charts-title {
+			text-align: center;
+		}
+
+		.legend-title {
 			text-align: center;
 		}
 	}
