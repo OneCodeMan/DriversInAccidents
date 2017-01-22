@@ -17,6 +17,8 @@
       text-align: center; }
   .container .ages {
     font-weight: bold; }
+    .container .ages h3 {
+      text-align: center; }
     .container .ages .age-div-fact {
       border: solid 1px;
       text-align: center;
