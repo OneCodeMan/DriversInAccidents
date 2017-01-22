@@ -108,15 +108,19 @@ function median(arr) {
     }
 
   function plotAge() {
-    var avgAge = average(ages);
-    var rangeAge = arrayMax(ages) - arrayMin(ages);
-    var modeAge = mode(ages);
+    var avgAge = parseInt(average(ages));
     var medianAge = median(ages);
-    console.log(arrayMax(ages));
-    console.log(arrayMin(ages));
-    console.log(rangeAge);
-    console.log(modeAge);
-    console.log(medianAge);
+    var modeAge = mode(ages);
+    var avgEl = document.getElementById('avg-span');
+    var medianEl = document.getElementById('median-span');
+    var modeEl = document.getElementById('mode-span');
+
+    avgEl.innerHTML = avgAge;
+    medianEl.innerHTML = medianAge;
+    modeEl.innerHTML = modeAge;
+
+
+
 
   }
 

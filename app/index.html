@@ -80,29 +80,35 @@
 
 				<div class="row">
 					<div class="col-xs-12 col-md-offset-1 col-md-10">
-						<h3 id="ages-title">How Age Relates to Drivers in Accidents</h3>
+						<h3 id="ages-title">How Age Relates to Drivers in Apccidents</h3>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="col-xs-12 col-md-offset-1 col-md-10 age-div-fact" id="average-div">
-						<span class="ages-num">41</span><br> is the average age of a driver involved in a car accident.
+						<span class="ages-num" id="avg-span">--</span><br> is the average age of a driver involved in a car accident.
 					</div>
 					<div class="col-xs-12 col-md-offset-1 col-md-5 age-div-fact" id="median-div">
-						<span class="ages-num">40</span><br> is the median age of a driver involved in a car accident.
+						<span class="ages-num" id="median-span">--</span><br> is the median age of a driver involved in a car accident.
 					</div>
 					<div class="col-xs-12 col-md-5 age-div-fact" id="mode-div">
-						<span class="ages-num">22</span><br> is the most frequent age of a driver involved in a car accident.
+						<span class="ages-num" id="mode-span">--</span><br> is the most frequent age of a driver involved in a car accident.
 					</div>
 				</div>
 
 			</div>
 
+			<div id="map-container">
+				<div class="row">
+					<div class="col-xs-12 col-lg-12" id="map">
+					</div>
+				</div>
+			</div>
+
 </div>
 
-
-
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
