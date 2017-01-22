@@ -1,9 +1,16 @@
-.container-fluid {
+@import "partials/base";
+
+.container {
+	color: $default-black;
 
 	.pie-charts-div {
 		border: solid 1px;
 		border-radius: 15px;
 		padding: 10px;
+
+		#gender-pie-chart {
+			height: 400px;
+		}
 
 		ul {
 			list-style-type: none;
@@ -21,10 +28,36 @@
 		.legend-title {
 			text-align: center;
 		}
+
 	}
 
- 	.bar {
-		fill: steelblue;
+
+	.ages {
+		font-weight: bold;
+		.age-div-fact {
+			border: solid 1px;
+			text-align: center;
+			border-radius: 5px;
+			padding: 80px;
+		}
+
+		.ages-num {
+			font-size: 80px;
+		}
+
+		#average-div {
+			background-color: $fire-red;
+		}
+
+		#median-div {
+			background-color: $blue-jeans;
+		}
+
+		#mode-div {
+			background-color: $egg-yellow;
+		}
 	}
+
+
 
 }

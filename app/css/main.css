@@ -1,16 +1,32 @@
-.container-fluid .pie-charts-div {
-  border: solid 1px;
-  border-radius: 15px;
-  padding: 10px; }
-  .container-fluid .pie-charts-div ul {
-    list-style-type: none; }
-  .container-fluid .pie-charts-div li {
-    font-weight: bold;
-    font-size: 25px; }
-  .container-fluid .pie-charts-div #pie-charts-title {
-    text-align: center; }
-  .container-fluid .pie-charts-div .legend-title {
-    text-align: center; }
-
-.container-fluid .bar {
-  fill: steelblue; }
+.container {
+  color: #1A181B; }
+  .container .pie-charts-div {
+    border: solid 1px;
+    border-radius: 15px;
+    padding: 10px; }
+    .container .pie-charts-div #gender-pie-chart {
+      height: 400px; }
+    .container .pie-charts-div ul {
+      list-style-type: none; }
+    .container .pie-charts-div li {
+      font-weight: bold;
+      font-size: 25px; }
+    .container .pie-charts-div #pie-charts-title {
+      text-align: center; }
+    .container .pie-charts-div .legend-title {
+      text-align: center; }
+  .container .ages {
+    font-weight: bold; }
+    .container .ages .age-div-fact {
+      border: solid 1px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 80px; }
+    .container .ages .ages-num {
+      font-size: 80px; }
+    .container .ages #average-div {
+      background-color: #D05353; }
+    .container .ages #median-div {
+      background-color: #5BC0EB; }
+    .container .ages #mode-div {
+      background-color: #F9E784; }

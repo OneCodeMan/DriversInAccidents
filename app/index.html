@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container">
 
 	<div class="row">
 		<div class="col-xs-12 col-md-offset-2 col-md-8 text-center" id="app-title-div">
@@ -49,20 +49,20 @@
 
 					<ul>
 						<li>
-							<svg width="10" height="10">
-								<rect x="0" y="0" width="10" height="10" fill="#00A7E1" />
+							<svg width="10" height="15">
+								<rect x="0" y="0" width="10" height="15" fill="#00A7E1" />
 							</svg>
 							Male
 						</li>
 						<li>
-							<svg width="10" height="10">
-								<rect x="0" y="0" width="10" height="10" fill="#007EA7" />
+							<svg width="10" height="15">
+								<rect x="0" y="0" width="10" height="15" fill="#007EA7" />
 							</svg>
 							Female
 						</li>
 						<li>
-							<svg width="10" height="10">
-								<rect x="0" y="0" width="10" height="10" fill="#003459" />
+							<svg width="10" height="15">
+								<rect x="0" y="0" width="10" height="15" fill="#003459" />
 							</svg>
 							Null
 						</li>
@@ -74,18 +74,28 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
 					</div>
 				</div>
+			</div>
 
+			<div class="ages">
 				<div class="row">
-						<div class="col-xs-12 col-md-offset-2 col-md-6 bar-chart-div" id="age-bar-chart">
+					<div class="col-xs-12 col-md-offset-1 col-md-10 age-div-fact" id="average-div">
+						<span class="ages-num">41</span><br> is the average age of a driver involved in a car accident.
+					</div>
+					<div class="col-xs-12 col-md-offset-1 col-md-5 age-div-fact" id="median-div">
+						<span class="ages-num">40</span><br> is the median age of a driver involved in a car accident.
+					</div>
+					<div class="col-xs-12 col-md-5 age-div-fact" id="mode-div">
+						<span class="ages-num">22</span><br> is the most frequent age of a driver involved in a car accident.
+					</div>
 				</div>
 
-		</div>
+			</div>
+
 </div>
 
 
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="js/pie.js"></script>
-<script src="js/bar.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
