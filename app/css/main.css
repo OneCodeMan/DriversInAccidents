@@ -11,3 +11,6 @@
     text-align: center; }
   .container-fluid .pie-charts-div .legend-title {
     text-align: center; }
+
+.container-fluid .bar {
+  fill: steelblue; }
