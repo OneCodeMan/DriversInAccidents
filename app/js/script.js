@@ -1,3 +1,6 @@
+// google API KEY: AIzaSyDm2v8YS0bT_A1NTIfmtxgVX70b_hW_jjc
+
+
 function arrayMax(arr) {
   return arr.reduce((a, b) => Math.max(a, b));
 }
@@ -39,6 +42,7 @@ function median(arr) {
   var ages = [];
 
   d3.csv('data/DriversInAccidents.csv', function(data) {
+    console.log(data[33]);
     data.forEach(function(d) {
       var driverGender = d.drv_gndr_cd;
       var driverAgeRaw = d.drv_prty_age;
@@ -63,6 +67,7 @@ function median(arr) {
 
     plotGender();
     plotAge();
+    plotMap();
   });
 
   function plotGender() {
@@ -119,9 +124,16 @@ function median(arr) {
     medianEl.innerHTML = medianAge;
     modeEl.innerHTML = modeAge;
 
+  }
 
-
-
+  function plotMap() {
+    var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
   }
 
 })(window.d3);
