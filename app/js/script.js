@@ -35,6 +35,16 @@ function median(arr) {
   return median;
 }
 
+function occ(arr, el) {
+  var c = 0;
+  for(var i = 0; i < arr.length; i++) {
+    if (arr[i] === el) {
+      c++;
+    }
+  }
+  return c;
+}
+
 
 (function(d3) {
   'use strict';
@@ -71,12 +81,13 @@ function median(arr) {
       }
 
     });
+
     var statePlates = Array.from(new Set(statePlatesArr));
-    console.log(statePlates);
 
     plotGender();
     plotAge();
     plotTime();
+    plotStates();
   });
 
   function plotGender() {
@@ -145,8 +156,17 @@ function median(arr) {
   function plotTime() {
   }
 
-  function plotKilled() {
+  function plotStates() {
 
+    var stateList = new Vue({
+      el: '#states',
+      data: {
+        states: [
+          { msg: 'MI'},
+          { msg: 'FL'},
+        ]
+      }
+    })
   }
 
 })(window.d3);
